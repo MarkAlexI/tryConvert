@@ -1,20 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Converter</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <div class="nav-bar">
-            <li><a href="#base" class="active"> Перевод числа в другую базу </a></li>
-            <li><a href="#distance"> Перевод расстояния в другую систему мер </a></li>
-            <li><a href="#angle"> Перевод угловых мер </a></li>
+      <div class="nav-bar">
+        <ul>
+          <li>
+            <a href="#base" class="active"> Перевод числа в другую базу </a>
+          </li>
+          <li>
+            <a href="#distance"> Перевод расстояния в другую систему мер </a>
+          </li>
+          <li><a href="#angle"> Перевод угловых мер </a></li>
+        </ul>
+      </div>
+
+      <div class="wrapper">
+        <div class="block">
+          <h2 id="base">Перевод числа в другую систему счисления</h2>
+          <form>
+            <div class="start">
+              <label class="label"> Исходное число: </label>
+              <input
+                type="text"
+                class="input"
+                name="input"
+                id="input"
+                value="12"
+              />
+            </div>
+            <div class="from dropdown_menu">
+              <label class="label">
+                Выберите систему:
+                <select class="dropdown" id="convertfrom" name="convertfrom">
+                  <option value="2">2</option>
+                  <option value="8">8</option>
+                  <option value="10">10</option>
+                  <option value="16">16</option>
+                </select>
+              </label>
+            </div>
+            <div class="to dropdown_menu" id="main_dropdown_menu">
+              <label class="label">
+                Выберите систему:
+                <select
+                  class="convertto dropdown"
+                  name="convertto"
+                  id="main_dropdown"
+                >
+                  <option value="2">2</option>
+                  <option value="8">8</option>
+                  <option value="10">10</option>
+                  <option value="16">16</option>
+                </select>
+              </label>
+            </div>
+            <input
+              type="button"
+              class="button"
+              name="TryConvert"
+              id=""
+              value="Конвертировать"
+              onclick="numberConvert()"
+            />
+            <span class="span" id="out">Результат:</span>
+          </form>
         </div>
+      </div>
     </main>
     <script src="run.js"></script>
-</body>
+  </body>
+  <footer class="regular">
+    <p>Copyright MarkAlexI 2022</p>
+  </footer>
 </html>
