@@ -32,10 +32,10 @@ function numberConvert() {
   
 function lengthConvert() {
   let output = document.getElementById("out2");
-  let input = this.window.document.getElementById("input2").value;
+  let input = document.getElementById("input2").value;
 
-  let from = this.window.document.getElementById("from2").value;
-  let to = this.window.document.getElementById("second_dropdown").value;
+  let from = document.getElementById("from2").value;
+  let to = document.getElementById("second_dropdown").value;
   let koef = 10;
   let result = 0;
   
