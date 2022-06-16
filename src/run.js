@@ -63,3 +63,29 @@ function lengthConvert() {
   if (input < 0 || isNaN(result)) result = "введенное число не валидно";
   output.innerHTML = "Результат: " + result;
 }
+
+function angleConvert() {
+  let output = document.getElementById("out3");
+  let input = this.window.document.getElementById("input3").value;
+
+  let from = this.window.document.getElementById("from3").value;
+  let to = this.window.document.getElementById("third_dropdown").value;
+  let koef = 10;
+  let result = 0;
+  
+  if (from === "градус" && to === "градус") koef = 1;
+  if (from === "градус" && to === "радиан") koef = .01745;
+  if (from === "градус" && to === "град") koef = 1.111;
+  
+  if (from === "радиан" && to === "градус") koef = 57.296;
+  if (from === "радиан" && to === "радиан") koef = 1;
+  if (from === "радиан" && to === "град") koef = 63.662;
+  
+  if (from === "град" && to === "градус") koef = .9;
+  if (from === "град" && to === "радиан") koef = .01571;
+  if (from === "град" && to === "град") koef = 1;
+  
+  result = input * koef;
+  if (input < 0 || isNaN(result)) result = "введенное число не валидно";
+  output.innerHTML = "Результат: " + result;
+}
