@@ -40,23 +40,23 @@ function lengthConvert() {
   let result = 0;
   
   if (from === "м" && to === "м") koef = 1;
-  if (from === "м" && to === "фут") koef = 0.31;
-  if (from === "м" && to === "миля") koef = 1/1680;
-  if (from === "м" && to === "км") koef = 0.001;
+  if (from === "м" && to === "фут") koef = 3.28084;
+  if (from === "м" && to === "миля") koef = 1/1609.34;
+  if (from === "м" && to === "км") koef = .001;
   
-  if (from === "фут" && to === "м") koef = 2.9;
+  if (from === "фут" && to === "м") koef = .3048;
   if (from === "фут" && to === "фут") koef = 1;
   if (from === "фут" && to === "миля") koef = 0.000189;
-  if (from === "фут" && to === "км") koef = 2900;
+  if (from === "фут" && to === "км") koef = .0003048;
   
-  if (from === "миля" && to === "м") koef = 1680;
-  if (from === "миля" && to === "фут") koef = 1/0.000189;
+  if (from === "миля" && to === "м") koef = 1609.34;
+  if (from === "миля" && to === "фут") koef = 5280;
   if (from === "миля" && to === "миля") koef = 1;
-  if (from === "миля" && to === "км") koef = 0.7;
+  if (from === "миля" && to === "км") koef = 1.60934;
   
   if (from === "км" && to === "м") koef = 0.001;
-  if (from === "км" && to === "фут") koef = 0.001/2.9;
-  if (from === "км" && to === "миля") koef = 1/1.68;
+  if (from === "км" && to === "фут") koef = 3280.84;
+  if (from === "км" && to === "миля") koef = .621371;
   if (from === "км" && to === "км") koef = 1;
   
   result = input * koef;
