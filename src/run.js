@@ -36,30 +36,30 @@ function lengthConvert() {
 
   let from = document.getElementById("from2").value;
   let to = document.getElementById("second_dropdown").value;
-  let koef = 10;
+  let coef = 10;
   let result = 0;
   
-  if (from === "м" && to === "м") koef = 1;
-  if (from === "м" && to === "фут") koef = 3.28084;
-  if (from === "м" && to === "миля") koef = 1/1609.34;
-  if (from === "м" && to === "км") koef = .001;
+  if (from === "м" && to === "м") coef = 1;
+  if (from === "м" && to === "фут") coef = 3.28084;
+  if (from === "м" && to === "миля") coef = 1/1609.34;
+  if (from === "м" && to === "км") coef = .001;
   
-  if (from === "фут" && to === "м") koef = .3048;
-  if (from === "фут" && to === "фут") koef = 1;
-  if (from === "фут" && to === "миля") koef = 0.000189;
-  if (from === "фут" && to === "км") koef = .0003048;
+  if (from === "фут" && to === "м") coef = .3048;
+  if (from === "фут" && to === "фут") coef = 1;
+  if (from === "фут" && to === "миля") coef = 0.000189;
+  if (from === "фут" && to === "км") coef = .0003048;
   
-  if (from === "миля" && to === "м") koef = 1609.34;
-  if (from === "миля" && to === "фут") koef = 5280;
-  if (from === "миля" && to === "миля") koef = 1;
-  if (from === "миля" && to === "км") koef = 1.60934;
+  if (from === "миля" && to === "м") coef = 1609.34;
+  if (from === "миля" && to === "фут") coef = 5280;
+  if (from === "миля" && to === "миля") coef = 1;
+  if (from === "миля" && to === "км") coef = 1.60934;
   
-  if (from === "км" && to === "м") koef = 0.001;
-  if (from === "км" && to === "фут") koef = 3280.84;
-  if (from === "км" && to === "миля") koef = .621371;
-  if (from === "км" && to === "км") koef = 1;
+  if (from === "км" && to === "м") coef = 0.001;
+  if (from === "км" && to === "фут") coef = 3280.84;
+  if (from === "км" && to === "миля") coef = .621371;
+  if (from === "км" && to === "км") coef = 1;
   
-  result = input * koef;
+  result = input * coef;
   if (input < 0 || isNaN(result)) result = "введенное число не валидно";
   output.innerHTML = "Результат: " + result;
 }
@@ -70,22 +70,22 @@ function angleConvert() {
 
   let from = document.getElementById("from3").value;
   let to = document.getElementById("third_dropdown").value;
-  let koef = 10;
+  let coef = 10;
   let result = 0;
   
-  if (from === "градус" && to === "градус") koef = 1;
-  if (from === "градус" && to === "радиан") koef = .01745;
-  if (from === "градус" && to === "град") koef = 1.111;
+  if (from === "градус" && to === "градус") coef = 1;
+  if (from === "градус" && to === "радиан") coef = .01745;
+  if (from === "градус" && to === "град") coef = 1.111;
   
-  if (from === "радиан" && to === "градус") koef = 57.296;
-  if (from === "радиан" && to === "радиан") koef = 1;
-  if (from === "радиан" && to === "град") koef = 63.662;
+  if (from === "радиан" && to === "градус") coef = 57.296;
+  if (from === "радиан" && to === "радиан") coef = 1;
+  if (from === "радиан" && to === "град") coef = 63.662;
   
-  if (from === "град" && to === "градус") koef = .9;
-  if (from === "град" && to === "радиан") koef = .01571;
-  if (from === "град" && to === "град") koef = 1;
+  if (from === "град" && to === "градус") coef = .9;
+  if (from === "град" && to === "радиан") coef = .01571;
+  if (from === "град" && to === "град") coef = 1;
   
-  result = input * koef;
+  result = input * coef;
   if (input < 0 || isNaN(result)) result = "введенное число не валидно";
   output.innerHTML = "Результат: " + result;
 }
