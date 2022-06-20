@@ -66,10 +66,10 @@ function lengthConvert() {
 
 function angleConvert() {
   let output = document.getElementById("out3");
-  let input = this.window.document.getElementById("input3").value;
+  let input = document.getElementById("input3").value;
 
-  let from = this.window.document.getElementById("from3").value;
-  let to = this.window.document.getElementById("third_dropdown").value;
+  let from = document.getElementById("from3").value;
+  let to = document.getElementById("third_dropdown").value;
   let koef = 10;
   let result = 0;
   
