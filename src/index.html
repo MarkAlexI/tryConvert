@@ -12,12 +12,12 @@
       <div class="nav-bar">
         <ul>
           <li>
-            <a href="#base" class="active"> Перевод числа в другую базу </a>
+            <a href="#base" id="to_base" class="active" onclick="addClassForLink('to_base')"> Перевод числа в другую базу </a>
           </li>
           <li>
-            <a href="#distance"> Перевод расстояния в другую систему мер </a>
+            <a href="#distance" id="to_distance" onclick="addClassForLink('to_distance')"> Перевод расстояния в другую систему мер </a>
           </li>
-          <li><a href="#angle"> Перевод угловых мер </a></li>
+          <li><a href="#angle" id="to_angle" onclick="addClassForLink('to_angle')"> Перевод угловых мер </a></li>
         </ul>
       </div>
 
@@ -143,7 +143,7 @@
                 <select id="from3" name="">
                   <option value="градус"> градус </option>
                   <option value="радиан"> радиан </option>
-                  <option value="забыл"> град </option>
+                  <option value="град"> град </option>
                 </select>
               </label>
             </div>
@@ -157,7 +157,7 @@
                 >
                   <option value="градус"> градус </option>
                   <option value="радиан"> радиан </option>
-                  <option value="забыл"> град </option>
+                  <option value="град"> град </option>
                 </select>
               </label>
             </div>

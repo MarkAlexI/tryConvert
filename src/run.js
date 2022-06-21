@@ -89,3 +89,10 @@ function angleConvert() {
   if (input < 0 || isNaN(result)) result = "введенное число не валидно";
   output.innerHTML = "Результат: " + result;
 }
+
+function addClassForLink(direction) {
+  const links = document.querySelectorAll("a");
+  const activizeLink = document.getElementById(direction);
+  links.forEach(link => link.classList.remove('active'));
+  activizeLink.classList.add('active');
+}
