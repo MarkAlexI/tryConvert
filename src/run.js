@@ -70,7 +70,7 @@ function angleConvert() {
 
   let from = document.getElementById("from3").value;
   let to = document.getElementById("third_dropdown").value;
-  let coef = 10;
+  let coef = 1;
   let result = 0;
   
   if (from === "градус" && to === "градус") coef = 1;

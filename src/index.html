@@ -74,29 +74,37 @@
         </div>
 
         <div class="block">
-          <h2 id="distance" class="content">Перевод длины в другую метрику</h2>
-          <form class="content">
-            <label class="label"> Исходное число: </label>
-            <input
-              type="text"
-              class="input"
-              name="input"
-              id="input2"
-              value="12"
-            />
-            <label class="label" id="">
-              Выберите систему:
-              <select id="from2" name="">
-                <option value="м">м</option>
-                <option value="фут">фут</option>
-                <option value="миля">миля</option>
-                <option value="км">км</option>
-              </select>
-            </label>
-            <div class="to dropdown_menu" id="second_dropdown_menu2">
+          <h2 id="distance">Перевод длины в другую метрику</h2>
+          <form>
+            <div class="start">
+              <label class="label"> Исходное число: </label>
+              <input
+                type="text"
+                class="input"
+                name="input"
+                id="input2"
+                value="12"
+              />
+            </div>
+            <div class="from dropdown_menu">
               <label class="label">
                 Выберите систему:
-                <select class="convertto dropdown" name="" id="second_dropdown">
+                <select id="from2" name="">
+                  <option value="м">м</option>
+                  <option value="фут">фут</option>
+                  <option value="миля">миля</option>
+                  <option value="км">км</option>
+                </select>
+              </label>
+            </div>
+            <div class="to dropdown_menu" id="second_dropdown_menu">
+              <label class="label">
+                Выберите систему:
+                <select
+                  class="convertto dropdown"
+                  name=""
+                  id="second_dropdown"
+                >
                   <option value="м">м</option>
                   <option value="фут">фут</option>
                   <option value="миля">миля</option>
@@ -117,33 +125,53 @@
         </div>
         
         <div class="block">
-
-       <h2 id="angle" class="content">Перевод угловых мер</h2>
-       <form class="content">
-         <label class="label"> Исходное число: </label>
-         <input type="text" class="input" name="input" id="input3" value="12" />
-         <label class="label" id=""> Выберите систему (исходная):
-         <select id="from3" name="">
-           <option value="градус"> градус </option>
-           <option value="радиан"> радиан </option>
-           <option value="забыл"> град </option>
-          </select>
-        </label>
-      <div class="to dropdown_menu" id="second_dropdown_menu3">
-        <label class="label"> Выберите систему (конечная):
-        <select class="convertto dropdown" name="" id="third_dropdown">
-         <option value="градус"> градус </option>
-         <option value="радиан"> радиан </option>
-         <option value="забыл"> град </option>
-        </select>
-        </label>
-      </div>
-     <input type="button" class="button" name="" id="" value="Конвертировать" onclick="angleConvert()"/>
-     <span class="span" id="out3" >Результат:</span>
-    </form>
- </div>
- 
-        
+          <h2 id="angle">Перевод угловых мер</h2>
+          <form>
+            <div class="start">
+              <label class="label"> Исходное число: </label>
+              <input
+                type="text"
+                class="input"
+                name="input"
+                id="input3"
+                value="12"
+              />
+            </div>
+            <div class="from dropdown_menu">
+              <label class="label">
+                Выберите систему (исходная):
+                <select id="from3" name="">
+                  <option value="градус"> градус </option>
+                  <option value="радиан"> радиан </option>
+                  <option value="забыл"> град </option>
+                </select>
+              </label>
+            </div>
+            <div class="to dropdown_menu" id="second_dropdown_menu">
+              <label class="label">
+                Выберите систему (конечная):
+                <select
+                  class="convertto dropdown"
+                  name=""
+                  id="third_dropdown"
+                >
+                  <option value="градус"> градус </option>
+                  <option value="радиан"> радиан </option>
+                  <option value="забыл"> град </option>
+                </select>
+              </label>
+            </div>
+            <input
+              type="button"
+              class="button"
+              name=""
+              id=""
+              value="Конвертировать"
+              onclick="angleConvert()"
+            />
+            <span class="span" id="out3" >Результат:</span>
+          </form>
+        </div>
       </div>
     </main>
     <script src="run.js"></script>
