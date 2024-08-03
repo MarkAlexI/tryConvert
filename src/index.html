@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ua">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,21 +12,21 @@
       <div class="nav-bar">
         <ul>
           <li>
-            <a href="#base" id="to_base" class="active" onclick="addClassForLink('to_base')"> Перевод числа в другую базу </a>
+            <a href="#base" id="to_base" class="active" onclick="addClassForLink('to_base')"> Переведення числа в іншу базу </a>
           </li>
           <li>
-            <a href="#distance" id="to_distance" onclick="addClassForLink('to_distance')"> Перевод расстояния в другую систему мер </a>
+            <a href="#distance" id="to_distance" onclick="addClassForLink('to_distance')"> Переведення відстані до іншої системи вимірювання </a>
           </li>
-          <li><a href="#angle" id="to_angle" onclick="addClassForLink('to_angle')"> Перевод угловых мер </a></li>
+          <li><a href="#angle" id="to_angle" onclick="addClassForLink('to_angle')"> Переведення кутових мір </a></li>
         </ul>
       </div>
 
       <div class="wrapper">
         <div class="block">
-          <h2 id="base">Перевод числа в другую систему счисления</h2>
+          <h2 id="base">Переведення числа в іншу систему числення</h2>
           <form>
             <div class="start">
-              <label class="label"> Исходное число: </label>
+              <label class="label"> Початкове число: </label>
               <input
                 type="text"
                 class="input"
@@ -37,18 +37,18 @@
             </div>
             <div class="from dropdown_menu">
               <label class="label">
-                Выберите систему:
+                Виберіть систему:
                 <select class="dropdown" id="convertfrom" name="convertfrom">
                   <option value="2">2</option>
                   <option value="8">8</option>
-                  <option value="10">10</option>
+                  <option value="10" selected>10</option>
                   <option value="16">16</option>
                 </select>
               </label>
             </div>
             <div class="to dropdown_menu" id="main_dropdown_menu">
               <label class="label">
-                Выберите систему:
+                Виберіть систему:
                 <select
                   class="convertto dropdown"
                   name="convertto"
@@ -66,7 +66,7 @@
               class="button"
               name="TryConvert"
               id=""
-              value="Конвертировать"
+              value="Конвертувати"
               onclick="numberConvert()"
             />
             <span class="span" id="out">Результат:</span>
@@ -74,10 +74,10 @@
         </div>
 
         <div class="block">
-          <h2 id="distance">Перевод длины в другую метрику</h2>
+          <h2 id="distance">Переведення довжини в іншу метрику</h2>
           <form>
             <div class="start">
-              <label class="label"> Исходное число: </label>
+              <label class="label"> Початкове число: </label>
               <input
                 type="text"
                 class="input"
@@ -88,7 +88,7 @@
             </div>
             <div class="from dropdown_menu">
               <label class="label">
-                Выберите систему:
+                Виберіть систему:
                 <select id="from2" name="">
                   <option value="м">м</option>
                   <option value="фут">фут</option>
@@ -99,7 +99,7 @@
             </div>
             <div class="to dropdown_menu" id="second_dropdown_menu">
               <label class="label">
-                Выберите систему:
+                Виберіть систему:
                 <select
                   class="convertto dropdown"
                   name=""
@@ -107,7 +107,7 @@
                 >
                   <option value="м">м</option>
                   <option value="фут">фут</option>
-                  <option value="миля">миля</option>
+                  <option value="миля" selected>миля</option>
                   <option value="км">км</option>
                 </select>
               </label>
@@ -117,7 +117,7 @@
               class="button"
               name=""
               id=""
-              value="Конвертировать"
+              value="Конвертувати"
               onclick="lengthConvert()"
             />
             <span class="span" id="out2">Результат:</span>
@@ -125,10 +125,10 @@
         </div>
         
         <div class="block">
-          <h2 id="angle">Перевод угловых мер</h2>
+          <h2 id="angle">Переведення кутових мір</h2>
           <form>
             <div class="start">
-              <label class="label"> Исходное число: </label>
+              <label class="label"> Початкове число: </label>
               <input
                 type="text"
                 class="input"
@@ -139,24 +139,24 @@
             </div>
             <div class="from dropdown_menu">
               <label class="label">
-                Выберите систему (исходная):
+                Виберіть систему (початкова):
                 <select id="from3" name="">
-                  <option value="градус"> градус </option>
-                  <option value="радиан"> радиан </option>
+                  <option value="градус" selected> градус </option>
+                  <option value="радіан"> радіан </option>
                   <option value="град"> град </option>
                 </select>
               </label>
             </div>
             <div class="to dropdown_menu" id="second_dropdown_menu">
               <label class="label">
-                Выберите систему (конечная):
+                Виберіть систему (кінцева):
                 <select
                   class="convertto dropdown"
                   name=""
                   id="third_dropdown"
                 >
                   <option value="градус"> градус </option>
-                  <option value="радиан"> радиан </option>
+                  <option value="радіан" selected> радіан </option>
                   <option value="град"> град </option>
                 </select>
               </label>
@@ -166,7 +166,7 @@
               class="button"
               name=""
               id=""
-              value="Конвертировать"
+              value="Конвертувати"
               onclick="angleConvert()"
             />
             <span class="span" id="out3" >Результат:</span>
@@ -177,6 +177,6 @@
     <script src="./run.js"></script>
   </body>
   <footer class="regular">
-    <p>Copyright MarkAlexI 2022</p>
+    <p>Copyright MarkAlexI 2024</p>
   </footer>
 </html>
